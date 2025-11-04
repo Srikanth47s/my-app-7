@@ -1,13 +1,56 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.dis-block{
+  display: block !important
+}
+.dis-none{
+  display: none !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo-size{
+  width: 120px;
+  height: auto;
+}
+
+.search-dropdown{
+  position: absolute;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #efefef;
+  top:100%;
+  border-radius: 3px;
+  z-index: 1000;
+}
+
+.suugetion-item{
+  height: 27px;
+  margin-left: 10px;
+  margin-top: 5px;
+  
+}
+
+.suugetion-item:hover{
+  cursor: pointer; 
+  background-color: #efefef;
+}
+
+.image-text{
+  cursor: pointer;
+}
+.img-small {
+  width: 150px;
+  height: auto;  /* maintain aspect ratio */
+}
+.btn-button {
+  border: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  outline: none;          /* removes outline */
+  box-shadow: none;       /* removes bootstrap's default focus shadow */
+}
+/* .btn-button:focus,
+.btn-button:active {
+  outline: none !important;
+  box-shadow: none !important;
+} */
+.btn-button:hover{
+  background-color: gold;
 }

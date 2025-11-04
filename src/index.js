@@ -1,13 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Home } from './Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Login } from './Shared/Login';
+import { CreateAccount } from './Shared/CreateAccount';
+import ResetPassword from './Shared/Reset-Password';
+import 'bootstrap-icons/font/bootstrap-icons.min.css';
+import { Search } from './products.js/search';
+import { SingleProduct } from './products.js/SingleProduct';
+import { Adresses } from './adress/Adresses';
+import { Cart } from './products.js/Cart';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route  path='/' Component={Home} />
+        <Route path='/login' Component={Login} />
+        <Route path='/signup' Component={CreateAccount} /> 
+        <Route path='/reset-password' Component={ResetPassword} />
+        <Route path='/product-search' Component={Search} />
+        <Route path='/product/:productId' Component={SingleProduct} />
+        <Route path='/address' Component={Adresses} />
+        <Route path='/cart' Component={Cart} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
